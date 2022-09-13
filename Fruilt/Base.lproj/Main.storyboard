@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IxT-Cg-PAm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fruilt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SNb-HP-Ire">
+                                <rect key="frame" x="0.0" y="88" width="414" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="p1k-V2-gbi"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="r8N-u1-9Ae" customClass="ListFruitCell" customModule="Fruilt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8N-u1-9Ae" id="ssL-ad-Elo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caf-2P-6eE">
+                                                    <rect key="frame" x="30" y="0.0" width="250" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="7EH-Rk-ito"/>
+                                                        <constraint firstAttribute="height" constant="25" id="On0-Hb-c3u"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="caf-2P-6eE" firstAttribute="top" secondItem="ssL-ad-Elo" secondAttribute="top" id="VKQ-BO-RzF"/>
+                                                <constraint firstItem="caf-2P-6eE" firstAttribute="leading" secondItem="ssL-ad-Elo" secondAttribute="leading" constant="30" id="agv-ai-EoH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbNamefruilt" destination="caf-2P-6eE" id="C6N-ts-fMH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72v-b4-5g1">
+                                <rect key="frame" x="132" y="568" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w8W-hh-M0S"/>
+                                    <constraint firstAttribute="width" constant="150" id="xDH-ye-Fvb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btAddNewFruilt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phG-vs-HKa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="72v-b4-5g1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3TU-tb-Rac"/>
+                            <constraint firstItem="SNb-HP-Ire" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5FT-6S-grS"/>
+                            <constraint firstItem="72v-b4-5g1" firstAttribute="top" secondItem="SNb-HP-Ire" secondAttribute="bottom" constant="130" id="8ex-Me-6ZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SNb-HP-Ire" secondAttribute="trailing" id="kBV-ua-877"/>
+                            <constraint firstItem="SNb-HP-Ire" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sgV-yd-kQw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cLX-kc-NtV"/>
+                    <connections>
+                        <outlet property="fruitTable" destination="SNb-HP-Ire" id="f9N-4S-d2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="-50.223214285714285"/>
+        </scene>
+        <!--Add New Fruilt View Controller-->
+        <scene sceneID="Qvj-mL-m2C">
+            <objects>
+                <viewController storyboardIdentifier="AddScreen" id="mh2-y3-bJz" customClass="AddNewFruiltViewController" customModule="Fruilt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAl-rb-PVm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCL-ra-U6L">
+                                <rect key="frame" x="32" y="94" width="350" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="OyG-UX-2aq"/>
+                                    <constraint firstAttribute="height" constant="35" id="bXQ-fd-via"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2l-E5-KeV">
+                                <rect key="frame" x="82" y="329" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CnB-1j-JbV"/>
+                                    <constraint firstAttribute="height" constant="50" id="uor-dB-jVV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btAdd:" destination="mh2-y3-bJz" eventType="touchUpInside" id="mAj-Fq-eOV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LHe-Nw-Rb0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZCL-ra-U6L" firstAttribute="centerX" secondItem="LHe-Nw-Rb0" secondAttribute="centerX" id="F0P-hq-GRm"/>
+                            <constraint firstItem="F2l-E5-KeV" firstAttribute="centerX" secondItem="LHe-Nw-Rb0" secondAttribute="centerX" id="UsL-4J-DTd"/>
+                            <constraint firstItem="F2l-E5-KeV" firstAttribute="top" secondItem="ZCL-ra-U6L" secondAttribute="bottom" constant="200" id="qXq-Kr-kif"/>
+                            <constraint firstItem="ZCL-ra-U6L" firstAttribute="top" secondItem="LHe-Nw-Rb0" secondAttribute="top" constant="50" id="vNF-Mb-tON"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfInputFruilt" destination="ZCL-ra-U6L" id="lov-MD-YXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNf-bz-ssw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="-50"/>
+        </scene>
+        <!--Edit Fruilt View Controller-->
+        <scene sceneID="9mz-zH-Nsv">
+            <objects>
+                <viewController storyboardIdentifier="EditFruilt" id="oD3-ry-tdc" customClass="EditFruiltViewController" customModule="Fruilt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ypQ-PB-cYH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNT-Ry-JIs">
+                                <rect key="frame" x="32" y="194" width="350" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="WYN-lg-et0"/>
+                                    <constraint firstAttribute="height" constant="35" id="aYb-JX-zgq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCY-L0-GdG">
+                                <rect key="frame" x="132" y="479" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kur-09-PO6"/>
+                                    <constraint firstAttribute="width" constant="150" id="taC-ni-ADs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btEdit:" destination="oD3-ry-tdc" eventType="touchUpInside" id="de2-3M-qi2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NT1-ot-bMJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hCY-L0-GdG" firstAttribute="centerX" secondItem="NT1-ot-bMJ" secondAttribute="centerX" id="0lk-NW-UNK"/>
+                            <constraint firstItem="VNT-Ry-JIs" firstAttribute="centerX" secondItem="NT1-ot-bMJ" secondAttribute="centerX" id="9HL-mm-5Nl"/>
+                            <constraint firstItem="VNT-Ry-JIs" firstAttribute="top" secondItem="NT1-ot-bMJ" secondAttribute="top" constant="150" id="Sja-8i-3QI"/>
+                            <constraint firstItem="hCY-L0-GdG" firstAttribute="top" secondItem="VNT-Ry-JIs" secondAttribute="bottom" constant="250" id="auu-Ft-bVm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfFruilt" destination="VNT-Ry-JIs" id="KmD-0p-cVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVA-JO-Szg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330" y="-50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sp9-qF-3Ey">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IxT-Cg-PAm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rwN-Ba-GP4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vdX-OJ-kis"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFi-pX-SaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="-50.223214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,11 +9,14 @@ import Foundation
 protocol AddnewFruiltPresenterView: AnyObject {
 }
 class AddnewFruiltPresenter {
+    
     private weak var view: AddnewFruiltPresenterView?
+    
     init(with view: AddnewFruiltPresenterView){
         self.view = view
     }
-    func loadData(name: String) -> FruiltData  {
+    
+    func initFruit(name: String) -> FruiltData  {
         let fruilt = FruiltData(name: name)
         return fruilt
     }

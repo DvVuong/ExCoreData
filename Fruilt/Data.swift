@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class FruiltData {
+class FruiltData:Codable {
     var name = ""
     init(name: String){
         self.name = name

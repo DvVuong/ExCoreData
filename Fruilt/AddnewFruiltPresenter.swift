@@ -9,7 +9,6 @@ import Foundation
 protocol AddnewFruiltPresenterView: AnyObject {
 }
 class AddnewFruiltPresenter {
-    
     private weak var view: AddnewFruiltPresenterView?
     
     init(with view: AddnewFruiltPresenterView){

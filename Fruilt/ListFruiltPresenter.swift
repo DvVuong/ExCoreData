@@ -6,63 +6,52 @@
 //
 
 import Foundation
-
+import UIKit
 protocol ListFruiltPresenterView: AnyObject {
-    func updataTable()
     func addNewFruilt(count: Int)
     func editFruilt(at index: Int)
-    func removeFruilt(count: Int)
+    func removeFruilt(at index: Int)
+    func reloadData()
 }
 class ListFruiltPresenter {
-     
-    private  var fruilt = [FruiltData]()
-    let saveData = UserDefaults.standard
+    private var fruilt = [FruiltData]()
     private weak var  view: ListFruiltPresenterView?
     init(with view: ListFruiltPresenterView ) {
         self.view = view
     }
     func loadData() {
-        let f1 = FruiltData(name:"Cam")
-        let f2 = FruiltData(name: "chuoi")
-            do {
-                let encodedData: Data = try PropertyListEncoder().encode(f1)
-                UserDefaults.standard.set(encodedData, forKey: KEY_DATA)
-                let data = UserDefaults.standard.value(forKey: KEY_DATA) as! Data
-                let obj = try PropertyListDecoder().decode(FruiltData.self, from: data)
-                dump(obj)
-                
-            }
-            catch {
-                print(error)
-            }
-    
-        saveData.object(forKey: KEY_DATA)
-        self.fruilt.append(f1)
-        self.fruilt.append(f2)
-        saveData.object(forKey: KEY_DATA)
-        view?.updataTable()
+        fruilt = DataManger.sharedInstance.getFruilt()
+        view?.reloadData()
     }
+    
     func numOfItems() -> Int {
         return fruilt.count
     }
+    
     func itemAtIndex(_ index: Int) -> FruiltData? {
         guard index >= 0 && index < numOfItems() else {
             return nil
         }
         return fruilt[index]
     }
+    
     func addFruilt(data: [FruiltData]) {
         fruilt.append(contentsOf: data)
+    
+        DataManger.sharedInstance.saveFruits(data)
         view?.addNewFruilt(count: data.count)
     }
     func editData(data: FruiltData, index: Int){
+        guard let id = data.id else { return }
         fruilt[index] = data
+        DataManger.sharedInstance.updateName(data.name, with: id)
         view?.editFruilt(at: index)
     }
-    func removeData(count: Int){
-        fruilt.remove(at: count)
-        saveData.setCodableObject(fruilt, forKey: KEY_DATA)
-        view?.removeFruilt(count: count)
+    func removeData(index: Int){
+        guard let id = itemAtIndex(index)?.id else { return }
+        DataManger.sharedInstance.deleteById(id)
+        fruilt.remove(at: index)
+        view?.removeFruilt(at: index)
     }
     func reMoveRow(count: Int) -> Int {
         return count
@@ -72,15 +61,4 @@ class ListFruiltPresenter {
         return index
     }
 }
-extension UserDefaults {
-    func setCodableObject<T: Codable>(_ data: T?, forKey defaultName: String) {
-            let encoded = try? JSONEncoder().encode(data)
-            set(encoded, forKey: defaultName)
-        }
-        func codableObject<T : Codable>(dataType: T.Type, key: String) -> T? {
-            guard let userDefaultData = data(forKey: key) else {
-                return nil
-            }
-            return try? JSONDecoder().decode(T.self, from: userDefaultData)
-        }
-}
+

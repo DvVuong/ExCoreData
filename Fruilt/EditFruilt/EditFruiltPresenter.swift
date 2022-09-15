@@ -11,7 +11,7 @@ protocol EditFruiltView: AnyObject {
 }
 class EditFruiltPresenter {
     private var view: EditFruiltView?
-    private var fruilt: FruiltData!
+    private var fruilt: FruiltData
    
     init(with view: EditFruiltView, fruilt: FruiltData) {
         self.view = view
@@ -23,7 +23,7 @@ class EditFruiltPresenter {
     }
     
     func reloadData(name: String) -> FruiltData{
-        let f1 = FruiltData(name: name)
-        return f1
+        fruilt.name = name
+        return fruilt
     }
 }

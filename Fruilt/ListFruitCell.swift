@@ -19,7 +19,7 @@ class ListFruitCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func upDateUi(_ fruilt: FruiltData) {
+    func updataUI(_ fruilt: FruiltData) {
         lbNamefruilt.text = fruilt.name
         
     }

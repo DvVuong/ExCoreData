@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84A0ACF428D1CE6300BA61B5 /* UserKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0ACF328D1CE6300BA61B5 /* UserKey.swift */; };
+		84A2372728D2C62200DA221F /* FruiltData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2372628D2C62200DA221F /* FruiltData.swift */; };
+		84A2372B28D2CEE100DA221F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2372A28D2CEE100DA221F /* DataManager.swift */; };
+		84F4542528D2E4300046CF33 /* FruiltDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F4542328D2E4300046CF33 /* FruiltDatabase.xcdatamodeld */; };
 		E26C98B128D0F703000DBB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98B028D0F703000DBB72 /* AppDelegate.swift */; };
 		E26C98B328D0F703000DBB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98B228D0F703000DBB72 /* SceneDelegate.swift */; };
 		E26C98B528D0F703000DBB72 /* ListFruiltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98B428D0F703000DBB72 /* ListFruiltViewController.swift */; };
@@ -15,7 +18,6 @@
 		E26C98BA28D0F70A000DBB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26C98B928D0F70A000DBB72 /* Assets.xcassets */; };
 		E26C98BD28D0F70A000DBB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26C98BB28D0F70A000DBB72 /* LaunchScreen.storyboard */; };
 		E26C98C528D0F74C000DBB72 /* ListFruitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98C428D0F74C000DBB72 /* ListFruitCell.swift */; };
-		E26C98C728D0F776000DBB72 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98C628D0F776000DBB72 /* Data.swift */; };
 		E26C98C928D0F788000DBB72 /* ListFruiltPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98C828D0F787000DBB72 /* ListFruiltPresenter.swift */; };
 		E26C98CB28D0F795000DBB72 /* AddnewFruiltPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98CA28D0F795000DBB72 /* AddnewFruiltPresenter.swift */; };
 		E26C98CD28D0F79F000DBB72 /* AddNewFruiltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C98CC28D0F79E000DBB72 /* AddNewFruiltViewController.swift */; };
@@ -25,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		84A0ACF328D1CE6300BA61B5 /* UserKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKey.swift; sourceTree = "<group>"; };
+		84A2372628D2C62200DA221F /* FruiltData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruiltData.swift; sourceTree = "<group>"; };
+		84A2372A28D2CEE100DA221F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		84F4542428D2E4300046CF33 /* FruiltDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruiltDatabase.xcdatamodel; sourceTree = "<group>"; };
 		E26C98AD28D0F702000DBB72 /* Fruilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26C98B028D0F703000DBB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26C98B228D0F703000DBB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		E26C98BC28D0F70A000DBB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E26C98BE28D0F70A000DBB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26C98C428D0F74C000DBB72 /* ListFruitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFruitCell.swift; sourceTree = "<group>"; };
-		E26C98C628D0F776000DBB72 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E26C98C828D0F787000DBB72 /* ListFruiltPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFruiltPresenter.swift; sourceTree = "<group>"; };
 		E26C98CA28D0F795000DBB72 /* AddnewFruiltPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddnewFruiltPresenter.swift; sourceTree = "<group>"; };
 		E26C98CC28D0F79E000DBB72 /* AddNewFruiltViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewFruiltViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84F4542628D2E4560046CF33 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				84A2372A28D2CEE100DA221F /* DataManager.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		E26C98A428D0F702000DBB72 = {
 			isa = PBXGroup;
 			children = (
@@ -72,7 +84,7 @@
 		E26C98AF28D0F702000DBB72 /* Fruilt */ = {
 			isa = PBXGroup;
 			children = (
-				E26C98D328D0FD12000DBB72 /* AddNewFruilt */,
+				84F4542628D2E4560046CF33 /* DataService */,
 				E26C98D228D0FCAD000DBB72 /* EditFruilt */,
 				E26C98C828D0F787000DBB72 /* ListFruiltPresenter.swift */,
 				E26C98CA28D0F795000DBB72 /* AddnewFruiltPresenter.swift */,
@@ -80,13 +92,13 @@
 				E26C98B028D0F703000DBB72 /* AppDelegate.swift */,
 				E26C98B228D0F703000DBB72 /* SceneDelegate.swift */,
 				E26C98B428D0F703000DBB72 /* ListFruiltViewController.swift */,
-				E26C98C628D0F776000DBB72 /* Data.swift */,
 				E26C98C428D0F74C000DBB72 /* ListFruitCell.swift */,
 				E26C98B628D0F703000DBB72 /* Main.storyboard */,
 				E26C98B928D0F70A000DBB72 /* Assets.xcassets */,
 				E26C98BB28D0F70A000DBB72 /* LaunchScreen.storyboard */,
 				E26C98BE28D0F70A000DBB72 /* Info.plist */,
 				84A0ACF328D1CE6300BA61B5 /* UserKey.swift */,
+				84F4542328D2E4300046CF33 /* FruiltDatabase.xcdatamodeld */,
 			);
 			path = Fruilt;
 			sourceTree = "<group>";
@@ -96,15 +108,9 @@
 			children = (
 				E26C98CE28D0F9BE000DBB72 /* EditFruiltPresenter.swift */,
 				E26C98D028D0F9CA000DBB72 /* EditFruiltViewController.swift */,
+				84A2372628D2C62200DA221F /* FruiltData.swift */,
 			);
 			path = EditFruilt;
-			sourceTree = "<group>";
-		};
-		E26C98D328D0FD12000DBB72 /* AddNewFruilt */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddNewFruilt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,17 +184,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A2372B28D2CEE100DA221F /* DataManager.swift in Sources */,
 				E26C98CF28D0F9BF000DBB72 /* EditFruiltPresenter.swift in Sources */,
 				84A0ACF428D1CE6300BA61B5 /* UserKey.swift in Sources */,
+				84F4542528D2E4300046CF33 /* FruiltDatabase.xcdatamodeld in Sources */,
 				E26C98C928D0F788000DBB72 /* ListFruiltPresenter.swift in Sources */,
 				E26C98C528D0F74C000DBB72 /* ListFruitCell.swift in Sources */,
-				E26C98C728D0F776000DBB72 /* Data.swift in Sources */,
 				E26C98B528D0F703000DBB72 /* ListFruiltViewController.swift in Sources */,
 				E26C98CB28D0F795000DBB72 /* AddnewFruiltPresenter.swift in Sources */,
 				E26C98D128D0F9CB000DBB72 /* EditFruiltViewController.swift in Sources */,
 				E26C98B128D0F703000DBB72 /* AppDelegate.swift in Sources */,
 				E26C98CD28D0F79F000DBB72 /* AddNewFruiltViewController.swift in Sources */,
 				E26C98B328D0F703000DBB72 /* SceneDelegate.swift in Sources */,
+				84A2372728D2C62200DA221F /* FruiltData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +416,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84F4542328D2E4300046CF33 /* FruiltDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F4542428D2E4300046CF33 /* FruiltDatabase.xcdatamodel */,
+			);
+			currentVersion = 84F4542428D2E4300046CF33 /* FruiltDatabase.xcdatamodel */;
+			path = FruiltDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E26C98A528D0F702000DBB72 /* Project object */;
 }

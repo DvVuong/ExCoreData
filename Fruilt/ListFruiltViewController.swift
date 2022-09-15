@@ -7,13 +7,13 @@
 
 import UIKit
 
+
 class ListFruiltViewController: UIViewController {
     @IBOutlet private weak var fruitTable: UITableView!
   
     private lazy var presenter = ListFruiltPresenter(with: self)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupTable()
         presenter.loadData()
         //print("\(type(of: self))", #function)
@@ -25,7 +25,6 @@ class ListFruiltViewController: UIViewController {
             fruitTable.deselectRow(at: indexPath, animated: true)
         }
     }
-    
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        print("\(type(of: self))", #function)
@@ -67,7 +66,7 @@ extension ListFruiltViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = fruitTable.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ListFruitCell
-        cell.upDateUi(presenter.itemAtIndex(indexPath.row)!)
+        cell.updataUI(presenter.itemAtIndex(indexPath.row)!)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,7 +77,7 @@ extension ListFruiltViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            presenter.removeData(count: indexPath.row)
+            presenter.removeData(index: indexPath.row)
         }
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -100,15 +99,16 @@ extension ListFruiltViewController: ListFruiltPresenterView {
         }
         fruitTable.insertRows(at: indexPaths, with: .automatic)
     }
-    func removeFruilt(count: Int) {
-        fruitTable.deleteRows(at: [IndexPath(row: count, section: 0)], with: .automatic)
+    func removeFruilt(at index: Int) {
+        fruitTable.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
     func editFruilt(at index: Int) {
-//        fruitTable.reloadData()
+        
         fruitTable.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
-    func updataTable() {
-        self.fruitTable.reloadData()
+    
+    func reloadData() {
+        fruitTable.reloadData()
     }
 }
 extension ListFruiltViewController: EditFruiltViewdelegate {
